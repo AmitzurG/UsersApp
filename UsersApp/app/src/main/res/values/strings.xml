@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">UsersApp</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_save">Save</string>
+    <string name="user_list_fragment_label">User List</string>
+    <string name="user_details_fragment_label">User Details</string>
+
+    <string name="imageHeader">Image</string>
+    <string name="nameHeader">Full Name</string>
+    <string name="imageInstruction">(click in image frame to get a random user image)</string>
+    <string name="image">Image</string>
+    <string name="name">Full Name: </string>
+    <string name="phone">Phone: </string>
+    <string name="email">Email: </string>
+
+    <string name="error">Error</string>
+    <string name="errorMessage">The field \"%1$s\" is not valid</string>
+    <string name="ok">OK</string>
+</resources>

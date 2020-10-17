@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent" 
+    tools:context=".view.UserDetailsFragment">
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/round_frame"
+        android:contentDescription="@string/imageInstruction" android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageTextView"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_marginTop="32dp" android:gravity="center"
+        android:text="@string/image" android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImageView" />
+
+    <TextView
+        android:id="@+id/imageInstructionsTextView"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_marginTop="4dp" android:gravity="center"
+        android:text="@string/imageInstruction" android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTextView" />
+
+    <LinearLayout
+        android:id="@+id/nameLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageInstructionsTextView">
+
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="@dimen/user_details_label_width" android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/name" android:textAppearance="?android:attr/textAppearanceMedium"
+            android:labelFor="@id/userNameEditText"/>
+
+        <EditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:inputType="text" android:lines="1" android:maxLength="30" android:importantForAutofill="no"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLayout">
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="@dimen/user_details_label_width" android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/phone" android:textAppearance="?android:attr/textAppearanceMedium"
+            android:labelFor="@id/phoneEditText"/>
+
+        <EditText
+            android:id="@+id/phoneEditText"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:inputType="phone" android:lines="1" android:maxLength="15" android:importantForAutofill="no" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLayout">
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="@dimen/user_details_label_width" android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/email" android:textAppearance="?android:attr/textAppearanceMedium"
+            android:labelFor="@id/emailEditText"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:inputType="textEmailAddress" android:lines="1" android:maxLength="30" android:importantForAutofill="no" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
